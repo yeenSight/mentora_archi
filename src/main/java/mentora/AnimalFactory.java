@@ -60,7 +60,9 @@ public class AnimalFactory {
     public static LivingBeingInterface creerAnimal(TypeAnimal type) {
         switch (type) {
             case CHIEN:
-                return new Chien();
+                Chien chien = new Chien();
+                chien.setNumberPaw(4);
+                return chien;
             case LAPIN:
                 return new Lapin();
             default:

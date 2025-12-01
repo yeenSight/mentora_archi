@@ -1,5 +1,7 @@
 package mentora;
 
+import mentora.animals.Lapin;
+
 import java.util.Collections;
 import java.util.List;
 
@@ -26,16 +28,21 @@ public class Maison {
 
     public void addAnimal(String animal) {
         animals.add(AnimalFactory.creerAnimal(animal));
+        ((AbstractLivingBeing) animals.get(0)).setNumberPaw(3);
     }
     public List<LivingBeingInterface> getAnimals() {
         return animals;
     }
 
     public void addHabitat(String type, String nourriture, Habitat.Taille taille) {
-        habitats.add(new Habitat.Builder()
+        habitats.add(new HabitatBuilder()
             .typeHabitat(type)
             .nourriture(nourriture)
             .taille(taille)
             .build());
+        habitats.add(new HabitatBuilder()
+                .nourriture(nourriture)
+                .taille(taille)
+                .build());
     }
 }

@@ -4,6 +4,7 @@ import java.util.List;
 
 public class Infos {
     List<LivingBeingInterface> livingBeings;
+    Maison maison;
 
     /**
      * Permet de retourner un animal indépendement de son type.
@@ -21,6 +22,7 @@ public class Infos {
                 return being;
             }
         }
+        maison = Maison.getInstance();
         return null;
     }
 }

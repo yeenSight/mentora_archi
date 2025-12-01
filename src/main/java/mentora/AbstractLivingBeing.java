@@ -1,7 +1,7 @@
 package mentora;
 
 public abstract class AbstractLivingBeing implements LivingBeingInterface {
-
+    private int numberPaw;
     /**
      * Méthode abstraite à implémenter dans les classes filles
      */
@@ -12,5 +12,13 @@ public abstract class AbstractLivingBeing implements LivingBeingInterface {
      */
     public void goForward(){
         System.out.println("Je vais de l'avant");
+    }
+
+    public void setNumberPaw(int nbPaw){
+        numberPaw = nbPaw;
+    }
+
+    public int getNumberPaw(){
+        return numberPaw;
     }
 }
